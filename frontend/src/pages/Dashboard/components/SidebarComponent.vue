@@ -17,6 +17,7 @@
         <div class="menu">
             <ul>
                 <li><router-link :to="{name: 'home'}"><i class="fa fa-home icon"></i>Home</router-link></li>
+                <li><router-link :to="{name: 'clients'}"><i class="fa fa-box icon"></i>Clientes</router-link></li>
                 <li><router-link :to="{name: 'products'}"><i class="fa fa-box icon"></i>Produtos</router-link></li>
                 <li><router-link :to="{name: 'products'}"><i class="fa fa-store icon"></i>Vendas</router-link></li>
                 <li><router-link :to="{name: 'products'}"><i class="fa fa-chart-bar icon"></i>Relatórios</router-link></li>

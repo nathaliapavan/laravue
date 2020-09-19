@@ -15,15 +15,13 @@
                     <th scope="col">#</th>
                     <th scope="col">{{ columns[0] }}</th>
                     <th scope="col">{{ columns[1] }}</th>
-                    <th scope="col">Telefone</th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="user in data" :key="user.id">
-                    <th scope="row"><p class="user">{{ user.id }}</p></th>
-                    <td><p class="user">{{ user.name }}</p></td>
-                    <td><p class="user">{{ user.email }}</p></td>
-                    <td><p class="user">{{ user.phone }}</p></td>
+                <tr v-for="item in data" :key="item.id">
+                    <th scope="row"><p class="user">{{ item.id }}</p></th>
+                    <td><p class="user">{{ item.name }}</p></td>
+                    <td><p class="user">{{ (description == 'Clientes') ? item.email : item.valor }}</p></td>
                 </tr>
             </tbody>
             </table>
@@ -37,7 +35,7 @@ export default {
     props: {
         data: Array,
         description: String,
-        columns: []
+        columns: {}
     }
 }
 </script>
